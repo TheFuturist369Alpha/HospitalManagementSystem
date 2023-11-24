@@ -5,7 +5,7 @@ using ViewModels;
 namespace HospitalManagementSystem.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Contact")]
+    [Route("Contacts")]
     public class ContactController : Controller
     {
         private readonly IContacts _contact;
