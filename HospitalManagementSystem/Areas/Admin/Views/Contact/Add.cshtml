@@ -1,0 +1,43 @@
+﻿@model ViewModels.ContactViewModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<h4>ContactViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Contact" asp-action="Add" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" class="form-control" value="@Guid.NewGuid()" />
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phone" class="control-label"></label>
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
